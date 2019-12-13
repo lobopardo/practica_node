@@ -4,7 +4,7 @@ const mysqlConnection=require("../connection");
 
 Router.get("/",(req,res)=>
 {
-    mysqlConnection.query("SELECT* FROM people",(err,rows,fields)=>{
+    mysqlConnection.query("SELECT* FROM people where id = 1",(err,rows,fields)=>{
         if(!err)
         {
             res.send(rows);
